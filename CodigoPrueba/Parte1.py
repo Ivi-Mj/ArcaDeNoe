@@ -58,3 +58,4 @@ class Arca:
         print(f"Animales: {len(cls.animales)}")
         print(f"Alimentos: {len(cls.alimentos)}")
         print(f"Agua: {cls.agua}")
+        
