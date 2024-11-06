@@ -1,10 +1,12 @@
 class Arca:
+    # Atributos estáticos
     animales = []
     alimentos = []
     agua = 0
     capacidad_maxima = 0
 
     def __init__(cls, capacidad_maxima):
+        """Inicializa el arca con capacidad máxima, listas vacías y agua a cero."""
         cls.capacidad_maxima = capacidad_maxima
         cls.animales = []
         cls.alimentos = []
@@ -12,50 +14,53 @@ class Arca:
 
     @classmethod
     def agregar_animal(cls, animal):
-        if len(cls.animales) < cls.capacidad_maxima:
+        """Agrega un animal al arca si no se supera la capacidad máxima."""
+        if len(cls.animales) + len(cls.alimentos) < cls.capacidad_maxima:
             cls.animales.append(animal)
-            print(f"Animal {animal.nombre} agregado a la arca.")
+            print(f"Animal {animal.nombre} agregado al arca.")
         else:
-            print("No hay espacio suficiente para más animales.")
-
+            print("No hay espacio suficiente en el arca para más animales.")
+    
     @classmethod
     def agregar_alimento(cls, alimento):
+        """Agrega un alimento al arca."""
         cls.alimentos.append(alimento)
-        print(f"Alimento {alimento.tipo} agregado a la arca.")
-
+        print(f"Alimento {alimento.tipo} agregado al arca.")
+    
     @classmethod
     def agregar_agua(cls, cantidad):
+        """Agrega agua al arca."""
         cls.agua += cantidad
-        print(f"Se han añadido {cantidad} unidades de agua a la arca.")
-
+        print(f"{cantidad} litros de agua agregados al arca.")
+    
     @classmethod
     def alimentar_animal(cls, animal):
-        alimento_adecuado = None
-        for alimento in cls.alimentos:
-            if alimento.es_alimento_adecuado(animal.tipo):
-                alimento_adecuado = alimento
-                break
-
-        if alimento_adecuado:
-            alimento_adecuado.usar(1)  # Alimentamos al animal con 1 unidad de alimento.
-            animal.alimentar()
-            print(f"{animal.nombre} ha sido alimentado.")
+        """Alimenta a un animal con un alimento adecuado."""
+        if animal in cls.animales:
+            for alimento in cls.alimentos:
+                if alimento.es_alimento_adecuado(animal.tipo):
+                    alimento.usar(1)
+                    animal.alimentar()
+                    print(f"{animal.nombre} ha sido alimentado con {alimento.tipo}.")
+                    return
+            print(f"No se encontró alimento adecuado para {animal.nombre}.")
         else:
-            print(f"No se ha encontrado alimento adecuado para {animal.nombre}.")
-
+            print(f"El animal {animal.nombre} no está en el arca.")
+    
     @classmethod
     def dar_agua(cls, animal):
-        if cls.agua > 0:
+        """Da agua a un animal específico."""
+        if animal in cls.animales:
             animal.dar_agua()
-            cls.agua -= 1
             print(f"{animal.nombre} ha recibido agua.")
         else:
-            print("No hay suficiente agua para dar a los animales.")
-
+            print(f"El animal {animal.nombre} no está en el arca.")
+    
     @classmethod
     def estado_arca(cls):
-        print(f"Estado actual del Arca:")
-        print(f"Animales: {len(cls.animales)}")
-        print(f"Alimentos: {len(cls.alimentos)}")
-        print(f"Agua: {cls.agua}")
-        
+        """Devuelve el estado actual del arca."""
+        return {
+            "Animales": len(cls.animales),
+            "Alimentos": len(cls.alimentos),
+            "Agua disponible": cls.agua
+        }
