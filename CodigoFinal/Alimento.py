@@ -1,35 +1,31 @@
 class Alimento:
     def __init__(self, tipo, cantidad):
-        """Inicializa el alimento con tipo y cantidad."""
         self.tipo = tipo
         self.cantidad = cantidad
     
     def usar(self, cantidad):
-        """Reduce la cantidad de alimento disponible."""
         if self.cantidad >= cantidad:
             self.cantidad -= cantidad
         else:
-            print(f"No hay suficiente {self.tipo}.")
+            print("No hay suficiente cantidad de alimento.")
     
-    @classmethod
-    def es_alimento_adecuado(cls, tipo_animal):
-        """Método que debe ser implementado en las clases derivadas de Alimento."""
-        raise NotImplementedError("Este método debe ser implementado en la clase derivada.")
-
-class Croquetas(Alimento):
+    @staticmethod
+    def es_alimento_adecuado(tipo_animal, tipo_alimento):
+        # Define una relación simple entre tipos de animales y alimentos
+        if (tipo_animal == "perro" and tipo_alimento == "carne") or \
+           (tipo_animal == "gato" and tipo_alimento == "atun") or \
+           (tipo_animal == "vaca" and tipo_alimento == "heno"):
+            return True
+        return False
+# Clases derivadas de Alimento
+class Carne(Alimento):
     def __init__(self, cantidad):
-        super().__init__("Croquetas", cantidad)
-    
-    @classmethod
-    def es_alimento_adecuado(cls, tipo_animal):
-        """Las croquetas son adecuadas tanto para perros como para gatos."""
-        return tipo_animal in ["Perro", "Gato"]
+        super().__init__("carne", cantidad)
+
+class Atun(Alimento):
+    def __init__(self, cantidad):
+        super().__init__("atun", cantidad)
 
 class Heno(Alimento):
     def __init__(self, cantidad):
-        super().__init__("Heno", cantidad)
-    
-    @classmethod
-    def es_alimento_adecuado(cls, tipo_animal):
-        """El heno es adecuado solo para gatos."""
-        return tipo_animal == "Gato"
+        super().__init__("heno", cantidad)
