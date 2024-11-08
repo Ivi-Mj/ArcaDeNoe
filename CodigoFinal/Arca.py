@@ -15,11 +15,11 @@ class Arca:
     @classmethod
     def agregar_animal(cls, animal):
         """Agrega un animal al arca si no se supera la capacidad máxima."""
-        if len(cls.animales) + len(cls.alimentos) < cls.capacidad_maxima:
+        if len(cls.animales) < cls.capacidad_maxima:
             cls.animales.append(animal)
             print(f"Animal {animal.nombre} agregado al arca.")
         else:
-            print("No hay espacio suficiente en el arca para más animales.")
+            raise ValueError("No hay espacio suficiente en el arca para más animales.")
     
     @classmethod
     def agregar_alimento(cls, alimento):
@@ -64,3 +64,13 @@ class Arca:
             "Alimentos": len(cls.alimentos),
             "Agua disponible": cls.agua
         }
+    
+    @classmethod
+    def mostrar_estado_animales(cls):
+        """Muestra el estado de todos los animales en el arca."""
+        if cls.animales:
+            print("Estado de los animales en el arca:")
+            for animal in cls.animales:
+                print(f"{animal.nombre} ({animal.tipo}) - {animal.estado()}")
+        else:
+            print("No hay animales en el arca.")
