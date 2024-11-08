@@ -14,10 +14,13 @@ croquetas = Croquetas(50)
 heno = Heno(30)
 
 # Agregar los animales y alimentos al arca
-arca.agregar_animal(perro1)
-arca.agregar_animal(gato1)
-arca.agregar_alimento(croquetas)
-arca.agregar_alimento(heno)
+try:
+    arca.agregar_animal(perro1)
+    arca.agregar_animal(gato1)
+    arca.agregar_alimento(croquetas)
+    arca.agregar_alimento(heno)
+except ValueError as e:
+    print(e)
 
 # Agregar agua al arca
 arca.agregar_agua(100)
@@ -32,6 +35,5 @@ arca.dar_agua(gato1)
 estado = arca.estado_arca()
 print(f"Estado del Arca: {estado}")
 
-# Ver el estado de los animales
-print(f"Estado de {perro1.nombre}: {perro1.estado()}")
-print(f"Estado de {gato1.nombre}: {gato1.estado()}")
+# Mostrar el estado de todos los animales
+arca.mostrar_estado_animales()
