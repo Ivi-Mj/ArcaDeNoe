@@ -12,6 +12,9 @@ El proyecto se implementa usando clases estáticas y objetos en Python. Incluye 
 - Verificar el estado actual de la arca y de los animales.
 - Controlar la capacidad máxima de la arca.
 
+![image](https://github.com/user-attachments/assets/577259c8-1f42-4c6d-8500-c063cde36afd)
+
+
 ## Características
 
 - **Clases y objetos:** Se usan para representar a los animales, los alimentos y la arca.
