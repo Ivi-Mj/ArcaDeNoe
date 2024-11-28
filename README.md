@@ -1,16 +1,22 @@
 # Proyecto Arca de Noé en Python
-
-Este proyecto simula la famosa historia de la Arca de Noé usando **programación orientada a objetos** en Python. El objetivo es crear una arca que pueda almacenar animales, alimentos y agua, y proporcionar funcionalidades para alimentar a los animales y darles agua. Los animales y los alimentos están representados por clases, y la arca gestiona su capacidad y su estado.
+En este proyecto nos hemos encargado de simular la famosa historia de la Arca de Noé usando **programación orientada a objetos** en Python.
+Nuestro objetivo era crear un arca que pueda almacenar animales, alimentos y agua, y proporcionar funcionalidades para alimentar a los animales y darles agua. Los animales y los alimentos están representados por clases, y la arca gestiona su capacidad y su estado.
 
 ## Descripción
 
-El proyecto se implementa usando clases estáticas y objetos en Python. Incluye las siguientes funcionalidades:
+Nuestro proyecto se implementa usando clases estáticas y objetos en Python.
+En este hemos incluido las siguientes funcionalidades:
 
 - Crear y gestionar una arca que contiene animales, alimentos y agua.
 - Agregar animales y alimentos a la arca.
 - Alimentar a los animales y darles agua.
 - Verificar el estado actual de la arca y de los animales.
 - Controlar la capacidad máxima de la arca.
+
+**Salida del código:**
+
+![image](https://github.com/user-attachments/assets/577259c8-1f42-4c6d-8500-c063cde36afd)
+
 
 ## Características
 
@@ -26,4 +32,4 @@ El proyecto se implementa usando clases estáticas y objetos en Python. Incluye 
 1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/tuusuario/arca-de-noe.git
+   git clone https://github.com/nwmorales/arca-de-noe.git
