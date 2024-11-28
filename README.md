@@ -7,6 +7,9 @@ Nuestro objetivo era crear un arca que pueda almacenar animales, alimentos y agu
 ![IMG-20241126-WA0001](https://github.com/user-attachments/assets/fc17f813-995c-487e-b1dc-de482de1719a)
 
 
+Link Trello: https://trello.com/invite/b/674617a9ca6d04e6087830ff/ATTI01c64edd951dc9484d1965c84e8f9a524D0B332B/arcadenoe
+
+
 ## Descripción
 
 Nuestro proyecto se implementa usando clases estáticas y objetos en Python.
