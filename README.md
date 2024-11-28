@@ -2,6 +2,11 @@
 En este proyecto nos hemos encargado de simular la famosa historia de la Arca de Noé usando **programación orientada a objetos** en Python.
 Nuestro objetivo era crear un arca que pueda almacenar animales, alimentos y agua, y proporcionar funcionalidades para alimentar a los animales y darles agua. Los animales y los alimentos están representados por clases, y la arca gestiona su capacidad y su estado.
 
+## Planificación
+
+![IMG-20241126-WA0001](https://github.com/user-attachments/assets/fc17f813-995c-487e-b1dc-de482de1719a)
+
+
 ## Descripción
 
 Nuestro proyecto se implementa usando clases estáticas y objetos en Python.
