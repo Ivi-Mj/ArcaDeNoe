@@ -31,7 +31,7 @@ class Arca:
             if alimento:
                 alimento.usar(1)
                 animal.alimentar()
-                print(f"{animal.nombre} ha sido alimentado.")
+                print(f"{animal.nombre} el {animal.tipo} ha sido alimentado con {alimento.tipo}")
             else:
                 print(f"No hay alimento adecuado para {animal.nombre}.")
         else:
@@ -48,7 +48,7 @@ class Arca:
     
     # Método para verificar el estado del arca
     def estado_arca(self):
-        return f"Animales: {len(self.animales)}, Alimentos: {len(self.alimentos)}, Agua disponible: {self.agua}"
+        return f"Animales: {len(self.animales)}, Cantidad de alimentos por animal disponible: {len(self.alimentos)}, Unidades de agua disponible: {self.agua}"
     
     # Método para encontrar el alimento adecuado para un animal
     def buscar_alimento_adecuado(self, animal):

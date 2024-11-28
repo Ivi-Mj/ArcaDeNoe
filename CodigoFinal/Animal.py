@@ -28,6 +28,6 @@ class Gato(Animal):
     def __init__(self, nombre):
         super().__init__(nombre, "gato")
 
-class Vaca(Animal):
+class Toro(Animal):
     def __init__(self, nombre):
-        super().__init__(nombre, "vaca")
+        super().__init__(nombre, "toro")

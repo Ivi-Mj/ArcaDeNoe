@@ -14,7 +14,7 @@ class Alimento:
         # Define una relación simple entre tipos de animales y alimentos
         if (tipo_animal == "perro" and tipo_alimento == "carne") or \
            (tipo_animal == "gato" and tipo_alimento == "atun") or \
-           (tipo_animal == "vaca" and tipo_alimento == "heno"):
+           (tipo_animal == "toro" and tipo_alimento == "heno"):
             return True
         return False
 # Clases derivadas de Alimento
