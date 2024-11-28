@@ -13,7 +13,8 @@ En este hemos incluido las siguientes funcionalidades:
 - Verificar el estado actual de la arca y de los animales.
 - Controlar la capacidad máxima de la arca.
 
-**Salida del codigo:**
+**Salida del código:**
+
 ![image](https://github.com/user-attachments/assets/577259c8-1f42-4c6d-8500-c063cde36afd)
 
 
@@ -31,4 +32,4 @@ En este hemos incluido las siguientes funcionalidades:
 1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/tuusuario/arca-de-noe.git
+   git clone https://github.com/nwmorales/arca-de-noe.git
